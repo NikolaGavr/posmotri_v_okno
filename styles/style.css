@@ -49,14 +49,20 @@ ol {
   border: 3px solid;
 }
 
+.result {
+}
+
 .result__video-container {
+  position: relative;
   width: 711px;
   height: 386px;
+  padding-bottom: 16px;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
+
 .result__video {
   width: 711px;
   height: 386px;
@@ -65,6 +71,7 @@ ol {
 .search-form {
   display: flex;
   align-content: space-between;
+  width: fit-content;
   width: 711px;
   height: 54px;
   gap: 40px;
@@ -76,45 +83,65 @@ ol {
   line-height: normal;
 }
 
-.content__details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 26px;
-  width: 399px;
-  height: 534px;
+.search-form__fieldset {
+  border: none;
+  width: fit-content;
 }
 
-.content__list {
-  width: 399px;
-  height: 324px;
-  gap: 30px;
-  overflow-y: scroll;
-}
-
-.content__accent {
-  color: #545050;
-  font-family: Oswald;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 94%; /* 70.5px */
-  text-transform: uppercase;
-}
-
-.title {
-  width: 260px;
-  height: 210px;
-  padding-right: 139px;
+.search-form__fieldset-title {
+  padding-bottom: 5px;
   color: #fff;
-  font-family: Oswald;
-  font-size: 75px;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 94%;
-  text-transform: uppercase;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form__label {
+}
+.search-form__label-text {
+}
+
+.search-form__textfield {
+  width: 225px;
+
+  background-color: #1b1919;
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-top: 1px solid #fff;
+
+  border-bottom: 1px solid #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   white-space: nowrap;
 }
+.search-form__pseudo-checkbox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-form__pseudo-checkbox::before {
+  content: "";
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
 .button {
   display: flex;
   margin-top: 20px;
@@ -131,4 +158,133 @@ ol {
   line-height: normal;
   flex-shrink: 0;
   border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 399px;
+  height: 534px;
+}
+
+.title {
+  width: 260px;
+  height: 210px;
+  padding-right: 139px;
+  margin-bottom: 26px;
+
+  color: #fff;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.content__accent {
+  color: #545050;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+}
+
+.content__list {
+  position: relative;
+  width: 399px;
+  height: 324px;
+  gap: 30px;
+  overflow-y: scroll;
+}
+
+.content__list::-webkit-scrollbar {
+  width: 0;
+}
+
+.cards-list-item-template {
+}
+
+.content__list-item {
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  width: 390px;
+  height: 103px;
+  padding: 2px;
+  margin-bottom: 30px;
+}
+.content__video-card-description-container {
+  display: block;
+}
+
+.content__video-card-title {
+  width: 200px;
+  padding-bottom: 6px;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  color: transparent;
+}
+
+.content__video-card-description::before {
+  content: "Вот, что видит кто-то из команды Практикума, когда не смотрит на код, а смотрит в окно.";
+  width: 200px;
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px; /* 90% */
+}
+
+.content__video-card-thumbnail {
+  display: block;
+  width: 194px;
+  height: 103px;
+}
+
+.more-button-template {
+}
+
+button {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.more-button {
+  display: flex;
+  width: 399px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader-template {
+  display: block;
+  position: absolute;
+  z-index: 0;
 }
