@@ -43,10 +43,8 @@ ol {
   width: 1140px;
   height: 534px;
   margin: 133px 30px;
-  gap: 30px;
   justify-content: space-between;
   align-items: end;
-  border: 3px solid;
 }
 
 .result {
@@ -59,6 +57,7 @@ ol {
   padding-bottom: 16px;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
   object-fit: cover;
   object-position: center;
 }
@@ -98,14 +97,26 @@ ol {
   line-height: normal;
 }
 
-.search-form__label {
+.search-form__fieldset-title:active {
+  border: 1px solid #fff;
+
+  background: #545050;
+}
+
+.search-form__label:focus {
+  outline: 1px solid #fff;
 }
 .search-form__label-text {
 }
 
+.search-form__checkbox-list {
+display: inline-block;
+vertical-align: middle;
+
+}
+
 .search-form__textfield {
   width: 225px;
-
   background-color: #1b1919;
   color: rgba(255, 255, 255, 0.7);
   border: none;
@@ -115,8 +126,16 @@ ol {
   font-weight: 400;
   line-height: normal;
   border-top: 1px solid #fff;
-
   border-bottom: 1px solid #fff;
+}
+
+.search-form__textfield:hover {
+  cursor: text;
+}
+
+.search-form__textfield:focus {
+  border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
 
 .visually-hidden {
@@ -130,7 +149,6 @@ ol {
 }
 .search-form__pseudo-checkbox {
   display: inline-flex;
-  align-items: center;
 }
 
 .search-form__pseudo-checkbox::before {
@@ -138,7 +156,23 @@ ol {
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
+  inset: 0;
   margin-right: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.search-form__pseudo-checkbox:active::before {
+  content: "";
+  width: 19px;
+  height: 19px;
+  background-color: #fff;
+  border: 3px solid #1b1919;
+  border-style: double;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+  border-radius: none;
   cursor: pointer;
 }
 
@@ -161,11 +195,23 @@ ol {
   cursor: pointer;
 }
 
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button:active {
+  text-decoration: none;
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: 1px solid #fff;
+}
+
 .content__details {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
   width: 399px;
   height: 534px;
 }
@@ -175,7 +221,6 @@ ol {
   height: 210px;
   padding-right: 139px;
   margin-bottom: 26px;
-
   color: #fff;
   font-family: Oswald;
   font-size: 75px;
@@ -197,9 +242,8 @@ ol {
 }
 
 .content__list {
+  display: block;
   position: relative;
-  width: 399px;
-  height: 324px;
   gap: 30px;
   overflow-y: scroll;
 }
@@ -212,21 +256,45 @@ ol {
 }
 
 .content__list-item {
+  width: 394px;
+  height: 103px;
+  padding: 2px;
+  margin-bottom: 30px;
 }
 
 .content__card-link {
   text-decoration: none;
 }
 
+.content__card-link:focus {
+display: block;
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  display: block;
+  outline-offset: 3px;
+  outline: 1px solid #fff;
+  }
+
+
 .content__video-card {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
-  width: 390px;
-  height: 103px;
+  justify-content: baseline;
+  align-content: baseline;
+  object-fit: cover;
   padding: 2px;
-  margin-bottom: 30px;
 }
+
+.content__video-card:active {
+  background-color: #545050;
+}
+
+.content__video-card:focus {
+  outline: 1px solid #fff;
+}
+
 .content__video-card-description-container {
   display: block;
 }
@@ -235,36 +303,54 @@ ol {
   width: 200px;
   padding-bottom: 6px;
   color: #fff;
-  font-family: Oswald;
+  font-family: "Oswald";
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
 }
+.content__video-card-title:hover {
+  text-decoration: underline;
+}
 
 .content__video-card-description {
   color: transparent;
-}
-
-.content__video-card-description::before {
-  content: "Вот, что видит кто-то из команды Практикума, когда не смотрит на код, а смотрит в окно.";
-  width: 200px;
-  color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 16.2px; /* 90% */
 }
 
+.content__video-card-description::before {
+  content: "Вот, что видит кто-то из команды Практикума, когда не смотрит на код, а смотрит в окно.";
+  color: #fff;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px; /* 90% */
+}
+
+.content__video-card-description:hover::before {
+  text-decoration: underline;
+}
+
 .content__video-card-thumbnail {
   display: block;
   width: 194px;
   height: 103px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.search-form__label.focus {
+outline: 1px solid #fff;
 }
 
 .more-button-template {
+
 }
 
 button {
