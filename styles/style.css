@@ -39,12 +39,9 @@ ol {
 
 .content {
   display: flex;
-  flex-direction: row;
-  width: 1140px;
-  margin-top: 133px;
-  margin-left: 30px;
-  justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
+  gap: 30px;
+  padding: 133px 30px
 }
 
 .result {
@@ -130,10 +127,15 @@ ol {
   white-space: nowrap;
 }
 
-.search-form__checkbox-list {
+.search-form__label {
   display: inline-block;
+}
+
+.search-form__checkbox-list {
+  display: flex;
   text-align: center;
   position: relative;
+  gap: 15px;
 }
 
 .search-form__pseudo-checkbox {
@@ -147,6 +149,10 @@ ol {
   border: 1px solid #fff;
   cursor: pointer;
   display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 9px;
 }
 
 .search-form__pseudo-checkbox:active::before {
@@ -158,7 +164,9 @@ ol {
   border-style: double;
 }
 
-.search-form__label {
+.search-form__label:focus-visible {
+  outline-offset: 1px;
+  outline: 1px solid #fff;
 }
 
 .search-form__label-text {
@@ -169,17 +177,14 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-right: 7px;
+  margin-left: 19px;
+  margin-right: 0px;
 }
+
 
 .search-form__label-text:hover {
   text-decoration: underline;
   cursor: pointer;
-}
-
-.search-form__label:focus {
-  display: block;
-  outline: none;
 }
 
 .search-form__label:focus-visible {
@@ -215,11 +220,6 @@ ol {
 .button:active {
   text-decoration: none;
   background-color: #545050;
-}
-
-.button:focus {
-  display: block;
-  outline: none;
 }
 
 .button:focus-visible {
@@ -301,20 +301,21 @@ ol {
   flex-direction: row;
   width: 394px;
   height: 103px;
-  padding: 1px;
+  padding: 0px;
+  margin-left: 2px;
 }
 
 .content__video-card:active {
   background-color: #545050;
 }
 
-.content__video-card:focus {
+.content__video-card:focus-visible {
   outline: 1px solid #fff;
 }
 
 .content__video-card-description-container {
   display: block;
-}
+  }
 
 .content__video-card-title {
   width: 200px;
@@ -339,8 +340,7 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 16.2px; /*  90%  */
-  padding-right: 10px;
-}
+ }
 
 .content__video-card-description::before {
   content: "Вот, что видит кто-то из команды Практикума, когда не смотрит на код, а смотрит в окно.";
@@ -350,7 +350,7 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 16.2px;
-  }
+}
 
 .content__video-card-description:hover::before {
   text-decoration: underline;
