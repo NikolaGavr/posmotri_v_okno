@@ -76,6 +76,7 @@ ol {
 
 .search-form__fieldset {
   border: none;
+  outline: none;
   width: fit-content;
 }
 
@@ -111,6 +112,10 @@ ol {
 .search-form__textfield:active {
   display: block;
   border: 1px solid #fff;
+}
+
+.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__textfield:focus-visible {
@@ -264,7 +269,7 @@ ol {
 
 .content__list-item {
   width: 394px;
-  height: 103px;
+  height: 104px;
   padding: 0px;
   margin-bottom: 30px;
 }
@@ -275,7 +280,8 @@ ol {
 
 .content__card-link {
   text-decoration: none;
-}
+  
+} 
 
 .content__card-link:focus-visible {
   display: block;
@@ -286,9 +292,9 @@ ol {
 .content__video-card {
   display: flex;
   flex-direction: row;
-  width: 394px;
+  width: 395px;
   height: 103px;
-  margin-left: 2px;
+  
 }
 
 .content__card-link_current .content__video-card {
@@ -306,6 +312,7 @@ ol {
 .content__video-card-description-container {
   display: block;
   width: 200px;
+  
 }
 
 .content__video-card-title {
