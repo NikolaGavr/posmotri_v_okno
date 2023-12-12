@@ -291,10 +291,9 @@ ol {
   margin-left: 2px;
 }
 
-.content__list-item:first-child {
+.content__card-link_current .content__video-card {
   background-color: #545050;
 }
-
 
 .content__video-card:active {
   background-color: #545050;
