@@ -64,7 +64,7 @@ ol {
   display: flex;
   align-content: space-between;
   width: fit-content;
-  padding-top: 12px;
+  padding-top: 16px;
   gap: 40px;
   color: #fff;
   font-family: inherit;
