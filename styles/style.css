@@ -114,13 +114,14 @@ ol {
   border: 1px solid #fff;
 }
 
-.search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__textfield:focus-visible {
+.search-form__label:focus-visible .search-form__textfield {
   outline-offset: 1px;
   outline: 1px solid #fff;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+  
 }
 
 .search-form__label:has(:focus-visible) {
@@ -183,10 +184,11 @@ ol {
   margin-right: 0px;
 }
 
-.search-form__checkbox-list .search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   cursor: pointer;
 }
+
 
 .button {
   display: flex;
@@ -364,13 +366,7 @@ ol {
 .more-button {
   display: block;
   width: 399px;
-  font-family: "Fira Sans Condensed", "Arial", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  justify-content: center;
-  align-items: center;
+ 
 }
 
 .preloader-template {
